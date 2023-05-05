@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluzione Sommativa00</title>
+</head>
+<body>
+    <main id="idMainContent">
+        <!--
+        <label for="txtImmagine01">Immagine01</label>
+            <input type="text" name="txtImmagine01" id="txtImmagine01">
+        <br/>
+        <label for="txtImmagine02">Immagine02</label>
+            <input type="text" name="txtImmagine02" id="txtImmagine02">
+        <br/>
+        <div id="idImmagini">
+            ****Le immagini saranno caricate a runtime***
+            <img src="img/Faro.jpg" alt="Faro" width="300" height="200" id="idImmagine01">
+            <img src="img/TramontoTropicale.jpg" alt="Faro" width="300" height="200" id="idImmagine02">
+        </div>
+        <input type="button" value="Caricamento immagini" onclick="caricaImmagini()">
+        <input type="button" value="Inverti posizione" onclick="invertiImmagini()">
+        -->
+    </main>
+    <script>
+        var strPaginaIniziale = '<label for="txtImmagine01">Immagine01</label>';
+        strPaginaIniziale +=    '   <input type="text" name="txtImmagine01" id="txtImmagine01" placeholder="Faro.jpg"';
+        strPaginaIniziale +=    '<br/>'
+        strPaginaIniziale +=    '<label for="txtImmagine02">Immagine02</label>';
+        strPaginaIniziale +=    '   <input type="text" name="txtImmagine02" id="txtImmagine02" placeholder="TramontoTropicale.jpg">';
+        strPaginaIniziale +=    '<br/>';
+        strPaginaIniziale +=    '<div id="idImmagini">';
+        //strPaginaIniziale +=    '   <img src="img/Faro.jpg" alt="Faro" width="300" height="200" id="idImmagine01">'
+        //strPaginaIniziale +=    '   <img src="img/TramontoTropicale.jpg" alt="Faro" width="300" height="200" id="idImmagine02">'    
+        strPaginaIniziale +=    '</div>';
+        strPaginaIniziale +=    '<input type="button" value="Caricamento immagini" onclick="caricaImmaginiNew()">';
+        strPaginaIniziale +=    '<input type="button" value="Inverti posizione" onclick="invertiImmaginiNew()">';
+        document.getElementById("idMainContent").innerHTML = strPaginaIniziale;
+
+        //var objImmagine01 = document.getElementById("txtImmagine01"); 
+        //var objImmagine02 = document.getElementById("txtImmagine02");
+        /*
+        function caricaImmagini() {
+            //console.log("immagine01" + objImmagine01.value);
+            //console.log("immagine02" + objImmagine02.value);
+            //var strImmagini = '<img src="img/'+ objImmagine01.value +'" alt="Faro" width="300" height="200" id="idImmagine01">';
+            //strImmagini +=    '<img src="img/'+ objImmagine02.value +'" alt="Tramonto tropicale" width="300" height="200" id="idImmagine02">';
+            var strImmagini = '<img src="" alt="Faro" width="300" height="200" id="idImmagine01">';
+            strImmagini +=    '<img src="" alt="Tramonto tropicale" width="300" height="200" id="idImmagine02">';
+            document.getElementById("idImmagini").innerHTML = strImmagini;
+            document.getElementById("idImmagine01").src = 'img/' + objImmagine01.value;
+            document.getElementById("idImmagine02").src = 'img/' + objImmagine02.value;   
+        }
+        function invertiImmagini() {
+            var temp = objImmagine01;
+            objImmagine01 = objImmagine02;
+            objImmagine02 = temp;
+            var strImmagini = '<img src="img/'+ objImmagine01.value +'" alt="Faro" width="300" height="200" id="idImmagine01">';
+            strImmagini +=    '<img src="img/'+ objImmagine02.value +'" alt="Tramonto tropicale" width="300" height="200" id="idImmagine02">';
+            document.getElementById("idImmagini").innerHTML = strImmagini;
+        }
+        function invertiImmaginiCopia() {
+            var objImmagine01ValueCopia = objImmagine01.value;
+            var objImmagine02ValueCopia = objImmagine02.value;
+
+            var temp = objImmagine01ValueCopia;
+            objImmagine01ValueCopia = objImmagine02ValueCopia;
+            objImmagine02ValueCopia = temp;
+            var strImmagini = '<img src="img/'+ objImmagine01ValueCopia +'" alt="Faro" width="300" height="200" id="idImmagine01">';
+            strImmagini +=    '<img src="img/'+ objImmagine02ValueCopia +'" alt="Tramonto tropicale" width="300" height="200" id="idImmagine02">';
+            document.getElementById("idImmagini").innerHTML = strImmagini;
+        } 
+        */
+        function caricaImmaginiNew() {
+            var txtImmagine01 = document.getElementById("txtImmagine01").value;
+            var txtImmagine02 = document.getElementById("txtImmagine02").value;
+            var strImmagini = '<img src="img/'+ txtImmagine01 +'" alt="Faro" width="300" height="200" id="idImmagine01">';
+            strImmagini +=    '<img src="img/'+ txtImmagine02 +'" alt="Tramonto tropicale" width="300" height="200" id="idImmagine02">';
+            document.getElementById("idImmagini").innerHTML = strImmagini;
+        }
+        function invertiImmaginiNew() {
+            var immagine01 = document.getElementById("idImmagine01");
+            var immagine02 = document.getElementById("idImmagine02");
+            var temp = immagine01.src;
+            immagine01.src = immagine02.src
+            immagine02.src = temp;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page App</title>
+</head>
+<body>
+    <main id="main-content">
+        
+    </main>
+    
+    <script>
+        function cambiaImmagine() {
+            console.log("Esecuzione funzione cambiaImmagine()");
+            var img = document.getElementById("image");
+            img.src = "img/TramontoTropicale.jpg"
+        }
+        var titoloH1 = '<h1>Le uova di Gallina</h1>';
+        var titoloH2 = '<h2>Freeda non KALO!!!</h2>';
+        var paragrafo = '<p>Paragrafo su Freeda KALO</p>';
+        var immagine = '<img id="image"src="img/Faro.jpg" alt="Faro"><br/>';
+        var btnCambiaImmagine = '<input type="button" value="Cambia Immagine" onclick="cambiaImmagine()">';
+        var codiceHTML = titoloH1+titoloH2+paragrafo+immagine+btnCambiaImmagine;
+        //console.log(codiceHTML);
+        document.getElementById("main-content").innerHTML=codiceHTML;
+    </script>
+</body>
+</html>

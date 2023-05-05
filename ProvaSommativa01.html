@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova sommativa 01</title>
+    <link rel="stylesheet" href="style/ProvaSommativa01.css">
+    <script src="src/ProvaSommativa01.js"></script>
+</head>
+<body>
+    <form name="myForm" action="" onsubmit="return false">
+        <label for="txtNumeroRighe">Numero righe:</label>
+        <input type="number" name="txtNumeroRighe" id="txtNumeroRighe" min="1" onchange="abilitaBottoneCreaTabella()">
+        <label for="txtNumeroColonne">Numero colonne:</label>
+        <input type="number" name="txtNumeroColonne" id="txtNumeroColonne" min= "1" onchange="abilitaBottoneCreaTabella()">
+        <button name="btnCreaTabella" disabled onclick="creaTabella(document.myForm.txtNumeroRighe.value, document.myForm.txtNumeroColonne.value,'divTabella')">Crea tabella</button>
+    </form>
+    <div id="divTabella"></div>
+    <button id="btnHideTable" disabled onclick="nascondiTabella()">Nascondi tabella</button>
+</body>
+</html>

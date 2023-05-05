@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generatore di TAG</title>
+</head>
+<body>
+    <main>
+        <input type="button" value="Genera TAG" onclick="scriviTAG()">
+        <div id="idTAG"></div>
+    </main>
+    <script>
+        function scriviTAG() {
+            let div = document.getElementById("idTAG");
+            let strListaTAG = generaTAG('img','Faro.jpg','idFaro','immagine','img/Faro.jpg');
+            strListaTAG += generaTAG('img','TramontoTropicale.jpg','','immagine','img/TramontoTropicale.jpg');
+            div.innerHTML = strListaTAG;
+        }   
+        function generaTAG(tag,innerText,id,classe,url) {
+           let strTAG ="";
+           let lowerTAG = tag.toLowerCase();
+           switch (lowerTAG) {
+            case 'p': 
+            case 'h1': 
+            case 'h3': 
+            case 'span':
+                strTAG += '<' + lowerTAG + ' id="'+ id + '" class="'+ classe + '"' + '>' 
+                strTAG += innerText;
+                strTAG += '</' + lowerTAG + '>';
+                console.log(strTAG);
+                break;
+            case 'a':
+            strTAG += '<' + lowerTAG + ' href="' + url + '"' + ' id="'+ id + '" class="'+ classe + '"' + '>'
+                strTAG += innerText;
+                strTAG += '</' + lowerTAG + '>';
+                console.log(strTAG);
+                break;    
+            case 'img':
+                let proprId = '';
+                if(id != '')
+                    proprId += 'id="' + id +'"';
+                strTAG += '<' + lowerTAG + ' src="' + url + '" ' + proprId + ' class="'+ classe + '"' + ' alt="' + innerText + '"' +'/>'
+                console.log(strTAG);
+                break;                           
+            default:
+                break;
+           } 
+           return strTAG;
+        }
+    </script>
+</body>
+</html>

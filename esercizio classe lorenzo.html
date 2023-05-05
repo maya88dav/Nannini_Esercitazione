@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagrafica</title>
+</head>
+<body>
+    <form action="conferma.html" >
+        <fieldset>
+            <legend>Anagrafica</legend>
+
+                <table>
+                    <tr>
+                        <td>
+                            <label for="rSociale">Ragione Sociale</label>
+                            <br>
+                            <input type="text" id="rSociale" name="rSociale" placeholder="Inserire la propria rag. sociale">
+                        </td>
+                        <td>
+                            
+                            <label for="">P. IVA</label>
+                            <br>
+                            <input type="radio" name="pers" id="piva">
+                            <br>
+                            <label for="">PERS. FISICA</label>
+                            <br>
+                            <input type="radio" name="pers" id="pfis">
+                        </td> <!--checkbox-->
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="indir">Indirizzo</label>
+                            <br>
+                            <input type="text" id="indir" name="indir" placeholder="Inserire il proprio indirizzo">
+                        </td>
+                        <td>
+                            <label for="nr">Numero Civico</label>
+                            <br>
+                            <input type="text" id="nr" name="nr" placeholder="Inserisci il civico">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="cap">Cap</label>
+                            <br>
+                            <input type="text" id="cap" name="cap" placeholder="Inserire CAP">
+                        </td>
+                        <td>
+                            <label for="citta">Città</label>
+                            <br>
+                            <select name="citta" id="citta">
+                                <option value=""></option>
+                                <option value="" >Bologna</option>
+                                <option value="">Milano</option>
+                                <option value="">Roma</option>
+                                <option value="">Torino</option>
+                            </select>
+                        </td>
+                    <tr>
+                        <td>
+                            <label for="cf">Cod. Fiscale</label>
+                            <br>
+                            <input type="text" id="cf" name="cf" placeholder="Inserire il proprio C.F.">
+                        </td>
+                        <td>
+                            <label for="piva">P.Iva</label>
+                            <br>
+                            <input type="text" id="piva" name="piva" placeholder="Inserire P.Iva azienda">
+                        </td>
+                    </tr>
+                    </tr>
+                </table>
+
+        </fieldset>
+        <!--altro fieldset dopo per dati spediz-->
+        <br>
+        <fieldset>
+            <legend>Dati spedizione</legend>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="iSped">Ind. Spedizione</label>
+                                <br>
+                                <input type="text" id="iSped" name="iSped" size="6">
+                            </td>
+                            <td> 
+                                <br>
+                                <input type="text" placeholder="Nr. civico" maxlength="6" size="6" >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="" id="" maxlength="5" size="5" placeholder="CAP">
+                            </td>
+                            <td>
+                                <input type="text" name="" id="" size="15" placeholder="Città">
+                            </td>
+                        </tr>
+                    </table>
+                        <label for="">Scegli il tipo di spedizione</label>
+                                <br>
+
+                        <fieldset >
+                            <input type="radio" name="sped" id="ssta">
+                            <label for="ssta">Spedizione Standard</label>
+                            <input type="radio" name="sped" id="svel">
+                            <label for="svel">Spedizione Veloce</label>
+                        </fieldset>
+        </fieldset>
+        <fieldset style="text-align: center;">
+            <button type="reset">Cancella <br> i dati</button>
+            <button type="submit">Piazza <br> la spedizione</button>
+        </fieldset>
+    </form>
+</body>
+</html>

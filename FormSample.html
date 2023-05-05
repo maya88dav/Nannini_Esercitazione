@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form" name="form-name" action="img/Immagine01.jpg" method="post">
+        <fieldset>
+            <legend>Dati anagrafici</legend>
+            <label for="form-nome">Nome:</label>
+                <input type="text" name="nome" id="form-nome" value="" autofocus placeholder="XX-XX-XX" autocomplete="on" pattern="[A-Z]{2}" maxlength="1"><br/>
+            <label for="form-cognome">Cognome:</label>
+                <input type="text" name="cognome" id="form-cognome" value="" placeholder="Cognome">
+        </fieldset>
+        <p>Password</p>
+        <input type="password" name="password" id="form-password" required>
+        <p>Et&agrave;</p>
+        <input type="number" name="eta" id="form-eta">
+        <p>Sesso</p>
+        <input type="radio" name="sesso" id="form-radio-M" value="M">
+        <p>M</p>
+        <input type="radio" name="sesso" id="form-radio-F" value="=F">
+        <p>F</p>
+        <p>Titolo di studio</p>
+        <input type="radio" name="titolo-studio" id="form-titolo-studio-diploma" checked>
+        <p>Diploma</p>
+        <input type="radio" name="titolo-studio" id="form-titolo-studio-laurea">
+        <p>Laurea</p>
+        <input type="radio" name="titolo-studio" id="form-titolo-studio-master">
+        <p>Master</p>
+        <p>Accetto condizioni privacy</p>
+        <input type="checkbox" name="privacy" id="form-privacy" checked>
+        <p>Servizio richiesto</p>
+        <select name="servizio" id="form-servizio" disabled>
+            <option value="void" selected></option>
+            <option value="S1" >Servizio 01</option>
+            <option value="S2">Servizio 02</option>
+            <option value="S3">Servizio 03</option>
+        </select>
+        <p>Inserisci un commento</p>
+        <textarea name="" id="" cols="30" rows="10"></textarea><br/>
+        <!--
+            Cf:<input value="text">
+        -->
+        <!--<input type="url" name="immagine" id="immagine">-->
+        <label for="form-txt-codiceFiscale">CF:</label>
+            <input type="text" name="codice-fiscale" id="form-txt-codiceFiscale">
+        <p>conferma dati</p>
+        <label for="form-txt-file">Seleziona i files da inviare</label>
+            <input type="file" name="file" id="form-txt-file" multiple>
+        <input type="reset" value="AnnullaDentro" id="form-btn-Annulla" name="annulla">
+        <input type="submit" value="Conferma" id="form-btn-conferma" name="Conferma">
+    </form>
+</body>
+</html>

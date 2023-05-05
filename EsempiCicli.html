@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esempi cicli</title>
+</head>
+<body>
+    <script>
+        var myArray = ["Anna", "Paolo", "Anna", "Giovanna"];
+        /*
+        console.log(myArray[0]);
+        console.log(myArray[1]);
+        console.log(myArray[2]);
+        console.log(myArray[3]);
+        console.log(myArray[4]);
+    
+       for (var i = myArray.length-1; i > 0 ;i--) {
+            console.log(myArray[i]);
+            console.log(i);
+       } 
+       for (var i = myArray.length-1; i > 0 ;i-=2) {
+            console.log(myArray[i]);
+            console.log(i);
+       } 
+       
+       for (var i = 0; i < myArray.length ; i++) {
+            console.log(myArray[i]);
+            console.log(i);
+       } 
+       console.log(i);
+       */
+    // trovare elemento "Anna" ed indice di posizione
+    //Caso 1
+    for (var i = 0; myArray[i] != "Anna"; ++i);
+    console.log("Indice di Anna caso 1: " + i);
+
+    //Caso 2
+    var indiceDiAnna = null;
+    for (var i = 0; myArray[i] != "Anna"; ++i)
+        indiceDiAnna = i;
+    console.log("Indice di Anna caso 2: " + indiceDiAnna+1);
+      
+    //Caso 3
+    var indiceDiAnna = null;
+    for (let i = 0; i < myArray.length; i++) {
+        if (myArray[i] == "Anna") {
+            indiceDiAnna = i;
+        }
+    }   
+    console.log("Indice di Anna caso 3: " + indiceDiAnna);
+
+    //Caso 4
+    var indiceDiAnna = null;
+    for (let i = 0; i < myArray.length; i++) {
+        if (myArray[i] == "Anna") {
+            indiceDiAnna = i;
+            break;
+        }
+    }   
+    console.log("Indice di Anna caso 3: " + indiceDiAnna);
+
+    //while
+    let j = 0;
+    while (j < myArray.length) {
+        console.log(myArray[j++]);
+    }
+
+    //ricerca di Anna con While
+    let k = 0;
+    while (myArray[k] != "Anna" && k < myArray.length) {
+        k++;
+    }
+    console.log("Indice di Anna:" + k);
+
+    //do-while
+    let jj = 0;
+    do {
+        console.log(myArray[jj++]);
+    } while (jj < myArray.length);    
+
+    jj=0;
+    do {
+        //jj++;
+    } while (myArray[jj++] != "Anna");
+    console.log("Indice di Anna caso do-while:" + (jj-1).toString());
+    
+    </script>
+</body>
+</html>

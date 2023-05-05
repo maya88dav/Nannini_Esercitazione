@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizza nomi</title>
+</head>
+<body onload="caricaPaginaInziale()">
+    <main id="idMainContent">
+        <!--
+        <div id="idListaNomi">
+
+        </div>
+        <input type="button" value="Carica Nomi" id="btnCaricaNomi" onclick="caricamentoNomi()">
+        -->
+    </main>
+    <script>
+        function caricaPaginaInziale() {
+            let strPaginaIniziale  = '<div id="idListaNomi">';
+                strPaginaIniziale += '</div>';
+                strPaginaIniziale += '<input type="button" value="Carica Nomi" id="btnCaricaNomi" onclick="caricamentoNomi()">'
+            document.getElementById("idMainContent").innerHTML = strPaginaIniziale;
+        }
+        function caricamentoNomi() {
+            //console.log("CaricamentoNomi");
+            let arrayNomi = ["Massimo", "Paolo", "Anna", "Stefano","Stefania"];
+            let arrayNomiGirato = [];
+
+            for (let i = 0; i < arrayNomi.length; i++) {
+                arrayNomiGirato[arrayNomi.length-1-i] = arrayNomi[i];
+            }
+            console.log(arrayNomi);
+            console.log(arrayNomiGirato);
+            /*
+            let divListaNomi = document.getElementById("idListaNomi");
+            let strItems = "";
+            for (let i = 0; i < arrayNomi.length; i++) {
+                strItems += '<p>' + (i+1).toString() + ' - ' + arrayNomi[i] + '</p>';
+            }
+            divListaNomi.innerHTML = strItems;
+            */
+        }
+    </script>
+</body>
+</html>
